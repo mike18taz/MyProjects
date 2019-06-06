@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">MyProjects</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_project_detail">ProjectDetailActivity</string>
+    <string name="milestoneLabel">Milestones</string>
+    <string name="status">Status/Active</string>
+    <string name="button_save">Save</string>
+    <string name="button_cancel">Cancel</string>
 </resources>
