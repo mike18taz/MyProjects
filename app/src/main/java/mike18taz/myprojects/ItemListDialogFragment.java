@@ -4,6 +4,8 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.BottomSheetDialogFragment;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -39,6 +41,9 @@ public class ItemListDialogFragment extends BottomSheetDialogFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
+
+        //ItemListDialogFragment.newInstance(30);
+
         return inflater.inflate(R.layout.fragment_item_list_dialog, container, false);
     }
 
@@ -46,7 +51,10 @@ public class ItemListDialogFragment extends BottomSheetDialogFragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         final RecyclerView recyclerView = (RecyclerView) view;
         recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 2));
-        recyclerView.setAdapter(new ItemAdapter(getArguments().getInt(ARG_ITEM_COUNT)));
+        //recyclerView.setAdapter(new ItemAdapter(getArguments().getInt("30")));
+        this.getArguments();
+        recyclerView.setAdapter(new ItemAdapter(30));
+        //recyclerView.setAdapter(new ItemAdapter(getArguments().getInt(ARG_ITEM_COUNT)));
     }
 
     @Override
@@ -77,6 +85,16 @@ public class ItemListDialogFragment extends BottomSheetDialogFragment {
         ViewHolder(LayoutInflater inflater, ViewGroup parent) {
             // TODO: Customize the item layout
             super(inflater.inflate(R.layout.fragment_item_list_dialog_item, parent, false));
+
+            //FloatingActionButton fab2 = itemView.findViewById(R.id.fab2);
+            //fab2.setOnClickListener(new View.OnClickListener() {
+            //    @Override
+             //   public void onClick(View view) {
+             //       Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+             //               .setAction("Action", null).show();
+             //   }
+            //});
+
             text = (TextView) itemView.findViewById(R.id.text);
             text.setOnClickListener(new View.OnClickListener() {
                 @Override

@@ -1,16 +1,12 @@
 package mike18taz.myprojects;
 
-
-import android.support.v7.app.AppCompatActivity;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import mike18taz.myprojects.ItemFragmentProjects.OnListFragmentInteractionListener;
+import mike18taz.myprojects.ItemFragmentList2.OnListFragmentInteractionListener;
 import mike18taz.myprojects.dummy.DummyContent.DummyItem;
 
 import java.util.List;
@@ -20,12 +16,12 @@ import java.util.List;
  * specified {@link OnListFragmentInteractionListener}.
  * TODO: Replace the implementation with code for your data type.
  */
-public class MyItemRecyclerViewAdapter extends RecyclerView.Adapter<MyItemRecyclerViewAdapter.ViewHolder> {
+public class MyItemRecyclerViewAdapter2 extends RecyclerView.Adapter<MyItemRecyclerViewAdapter2.ViewHolder> {
 
     private final List<DummyItem> mValues;
     private final OnListFragmentInteractionListener mListener;
 
-    public MyItemRecyclerViewAdapter(List<DummyItem> items, OnListFragmentInteractionListener listener) {
+    public MyItemRecyclerViewAdapter2(List<DummyItem> items, OnListFragmentInteractionListener listener) {
         mValues = items;
         mListener = listener;
     }
@@ -33,9 +29,7 @@ public class MyItemRecyclerViewAdapter extends RecyclerView.Adapter<MyItemRecycl
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.fragment_item_project, parent, false);
-
-
+                .inflate(R.layout.fragment_item2, parent, false);
         return new ViewHolder(view);
     }
 
@@ -73,18 +67,11 @@ public class MyItemRecyclerViewAdapter extends RecyclerView.Adapter<MyItemRecycl
             mView = view;
             mIdView = (TextView) view.findViewById(R.id.item_number);
             mContentView = (TextView) view.findViewById(R.id.content);
-
-
-
         }
-
-
 
         @Override
         public String toString() {
             return super.toString() + " '" + mContentView.getText() + "'";
         }
     }
-
-
 }

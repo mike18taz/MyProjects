@@ -3,7 +3,17 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_project_detail">ProjectDetailActivity</string>
     <string name="milestoneLabel">Milestones</string>
-    <string name="status">Status/Active</string>
+    <string name="status">Active</string>
     <string name="button_save">Save</string>
     <string name="button_cancel">Cancel</string>
+    <string name="number">number</string>
+    <string name="content">content</string>
+    <string-array name="phases_array">
+        <item>Delay</item>
+        <item>Start</item>
+        <item>Planning</item>
+        <item>Working</item>
+        <item>Finalizing</item>
+        <item>Canceled</item>
+    </string-array>
 </resources>

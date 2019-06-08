@@ -1,5 +1,6 @@
 package mike18taz.myprojects;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -9,7 +10,9 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class MainActivity extends AppCompatActivity {
+import mike18taz.myprojects.dummy.DummyContent;
+
+public class MainActivity extends AppCompatActivity implements ItemFragmentProjects.OnListFragmentInteractionListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,11 +25,23 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "Opening Project", Snackbar.LENGTH_SHORT)
                         .setAction("Action", null).show();
+                openProject();
+
             }
         });
     }
+
+
+
+        public void openProject() {
+            Intent intent = new Intent(this, ProjectDetailActivity.class);
+            intent.setAction(Intent.ACTION_MAIN);
+            int requestCode = 1;
+
+            startActivityForResult(intent, requestCode);
+        }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -48,5 +63,10 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onListFragmentInteraction(DummyContent.DummyItem item) {
+
     }
 }
