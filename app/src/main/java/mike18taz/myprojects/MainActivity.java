@@ -47,6 +47,11 @@ public class MainActivity extends AppCompatActivity implements ItemFragmentProje
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
+
+        //android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+        //actionBar.hide();
+
+
         return true;
     }
 
@@ -62,8 +67,15 @@ public class MainActivity extends AppCompatActivity implements ItemFragmentProje
             return true;
         }
 
+        if (id == R.id.action_hide) {
+            android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+            actionBar.hide();
+        }
+
         return super.onOptionsItemSelected(item);
     }
+
+
 
     @Override
     public void onListFragmentInteraction(DummyContent.DummyItem item) {

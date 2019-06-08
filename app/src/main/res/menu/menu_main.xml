@@ -6,7 +6,8 @@
         android:id="@+id/action_hide"
         android:orderInCategory="10"
         android:title="@string/action_hide"
-        app:showAsAction="collapseActionView" />
+
+        app:showAsAction="always" />
     <item
         android:id="@+id/action_settings"
         android:orderInCategory="100"

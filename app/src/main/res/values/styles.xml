@@ -8,11 +8,12 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="MikesTheme" parent="AppTheme">
+    <style name="MikesTheme" parent="AppTheme.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkMike</item>
         <item name="colorAccent">@color/colorAccentMike</item>
+        <item name="android:colorButtonNormal">@color/colorWidgetBackground</item>
     </style>
 
     <style name="AppTheme.NoActionBar">

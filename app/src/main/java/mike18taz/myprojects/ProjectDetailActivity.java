@@ -1,5 +1,6 @@
 package mike18taz.myprojects;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -38,11 +39,24 @@ public class ProjectDetailActivity extends AppCompatActivity implements ItemFrag
         spinner.setAdapter(adapter);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+
     }
+
+    public void hideAppBar() {
+        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
+    }
+
 
     @Override
     public void onListFragmentInteraction(DummyContent.DummyItem item) {
 
+    }
+
+    public void openCalendar(View view) {
+        Intent intent = Intent.makeMainSelectorActivity(Intent.ACTION_MAIN, Intent.CATEGORY_APP_CALENDAR);
+        startActivityForResult(intent, 1);
     }
 
     //@Override
