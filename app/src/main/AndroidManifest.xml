@@ -13,7 +13,7 @@
             android:name=".ProjectDetailActivity"
             android:label="@string/title_activity_project_detail"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/MikesTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="mike18taz.myprojects.MainActivity" />

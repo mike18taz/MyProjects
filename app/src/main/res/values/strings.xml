@@ -8,6 +8,14 @@
     <string name="button_cancel">Cancel</string>
     <string name="number">number</string>
     <string name="content">content</string>
+    <string name="project_name">Project Name</string>
+    <string name="phase">Phase</string>
+    <string name="progress">Progress</string>
+    <string name="goal_date">Goal Date</string>
+    <string name="description">Description</string>
+    <string name="timeline">Timeline</string>
+    <string name="action_hide">Hide AppBar</string>
+    <string name="project_name_input">testproject</string>
     <string-array name="phases_array">
         <item>Delay</item>
         <item>Start</item>
